@@ -11,458 +11,1609 @@
     <h1>Inventario Personal</h1>
     <p class="verso">Mateo 7:1-5</p>
     
-    <div class="section">
+    <div class="instrucciones">
         <h2>Instrucciones</h2>
         <p>Califique a Edgar Martinez con toda honestidad y valentía a la hora de calificar. Esto ayudará a Edgar a discernir cómo tiene que cambiar.</p>
         <p>Note que las listas incluyen rasgos positivos y negativos. Dios nos pide no solo despojarnos del pecado, pero ponernos a Cristo y crecer en parecernos a Él. En las áreas negativas usa la misma escala.</p>
         <h2>Escala:</h2>
-        <p class="escala">1 = debilidad en el área; 2 = necesita mejorar; 3 = ha mejorado; 4 = satisfactorio/área de Fortaleza.</p>
-        <p>Ejemplo: “Explota”- Ponga 1 si explotar es un comportamiento habitual y 4 si es algo en lo que, en la gracia de Dios, no es una lucha.</p>
+        <p class="escala">1 = debilidad en el área; 2 = necesita mejorar; 3 = ha mejorado; 4 = satisfactorio/área de Fortaleza; 5 = excelente.</p>
+        <p>Ejemplo: “Explota”- Ponga 1 si explotar es un comportamiento habitual y 4 si es algo en lo que, en la gracia de Dios, no es una lucha.</p> 
     </div>
-    
+
     <form id="inventarioForm" method="post" autocomplete="off" name="google-sheet" action="https://script.google.com/macros/s/AKfycbzFQXtnHaiZqKNmsr6RTsMrx1MzcVnLJNjFxefvrAUjCnHQgInoiQM86N5BiHAvqjNRxw/exec">
-        <div class="section">
-            <h2>Preguntas: La Persona</h2>
+        
+
+        <div id="section2" class="section">
+            <h2>Preguntas: La Persona (Parte 1)</h2>
             
             <div class="faq">
                 <button type="button" class="faq-question">Admite cuando se equivoca</button>
                 <div class="faq-answer">
                     <label title="1 = debilidad en el área"><input type="radio" name="admite_equivoca" value="1" required> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="admite_equivoca" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="admite_equivoca" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="admite_equivoca" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="admite_equivoca" value="5"> 5</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="admite_equivoca" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="admite_equivoca" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="admite_equivoca" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="admite_equivoca" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Analítico</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="analitico" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="analitico" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="analitico" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="analitico" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="analitico" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="analitico" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="analitico" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="analitico" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="analitico" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="analitico" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Apreciativo</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="apreciativo" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="apreciativo" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="apreciativo" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="apreciativo" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="apreciativo" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="apreciativo" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="apreciativo" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="apreciativo" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="apreciativo" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="apreciativo" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Compasivo</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="compasivo" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="compasivo" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="compasivo" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="compasivo" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="compasivo" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="compasivo" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="compasivo" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="compasivo" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="compasivo" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="compasivo" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Concienzudo</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="concienzudo" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="concienzudo" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="concienzudo" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="concienzudo" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="concienzudo" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="concienzudo" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="concienzudo" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="concienzudo" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="concienzudo" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="concienzudo" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Meticuloso</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="meticuloso" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="meticuloso" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="meticuloso" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="meticuloso" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="meticuloso" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="meticuloso" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="meticuloso" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="meticuloso" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="meticuloso" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="meticuloso" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Considerado</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="considerado" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="considerado" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="considerado" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="considerado" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="considerado" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="considerado" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="considerado" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="considerado" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="considerado" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="considerado" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Consistente</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="consistente" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="consistente" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="consistente" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="consistente" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="consistente" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="consistente" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="consistente" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="consistente" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="consistente" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="consistente" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Dispuesto a cooperar</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="dispuesto_cooperar" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="dispuesto_cooperar" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="dispuesto_cooperar" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="dispuesto_cooperar" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="dispuesto_cooperar" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="dispuesto_cooperar" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="dispuesto_cooperar" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="dispuesto_cooperar" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="dispuesto_cooperar" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="dispuesto_cooperar" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Valiente, persona de valor/coraje</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="valiente" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="valiente" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="valiente" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="valiente" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="valiente" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="valiente" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="valiente" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="valiente" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="valiente" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="valiente" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Cortés</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="cortes" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="cortes" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="cortes" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="cortes" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="cortes" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="cortes" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="cortes" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="cortes" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="cortes" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="cortes" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Creativo</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="creativo" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="creativo" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="creativo" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="creativo" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="creativo" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="creativo" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="creativo" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="creativo" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="creativo" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="creativo" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Decisivo</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="decisivo" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="decisivo" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="decisivo" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="decisivo" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="decisivo" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="decisivo" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="decisivo" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="decisivo" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="decisivo" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="decisivo" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Confiable</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="confiable" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="confiable" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="confiable" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="confiable" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="confiable" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="confiable" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="confiable" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="confiable" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="confiable" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="confiable" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Diligente</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="diligente" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="diligente" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="diligente" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="diligente" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="diligente" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="diligente" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="diligente" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="diligente" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="diligente" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="diligente" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Discerniente</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="discerniente" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="discerniente" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="discerniente" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="discerniente" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="discerniente" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="discerniente" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="discerniente" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="discerniente" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="discerniente" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="discerniente" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Disciplinado</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="disciplinado" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="disciplinado" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="disciplinado" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="disciplinado" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="disciplinado" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="disciplinado" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="disciplinado" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="disciplinado" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="disciplinado" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="disciplinado" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">No se aprovecha de situaciones</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="no_se_aprovecha" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="no_se_aprovecha" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="no_se_aprovecha" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="no_se_aprovecha" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="no_se_aprovecha" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="no_se_aprovecha" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="no_se_aprovecha" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="no_se_aprovecha" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="no_se_aprovecha" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="no_se_aprovecha" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">No usa a la gente</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="no_usa_gente" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="no_usa_gente" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="no_usa_gente" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="no_usa_gente" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="no_usa_gente" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="no_usa_gente" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="no_usa_gente" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="no_usa_gente" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="no_usa_gente" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="no_usa_gente" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Eficiente</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="eficiente" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="eficiente" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="eficiente" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="eficiente" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="eficiente" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="eficiente" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="eficiente" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="eficiente" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="eficiente" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="eficiente" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Entusiasta</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="entusiasta" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="entusiasta" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="entusiasta" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="entusiasta" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="entusiasta" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="entusiasta" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="entusiasta" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="entusiasta" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="entusiasta" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="entusiasta" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Justo</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="justo" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="justo" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="justo" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="justo" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="justo" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="justo" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="justo" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="justo" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="justo" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="justo" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Flexible</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="flexible" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="flexible" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="flexible" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="flexible" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="flexible" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="flexible" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="flexible" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="flexible" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="flexible" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="flexible" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Frugal</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="frugal" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="frugal" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="frugal" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="frugal" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="frugal" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="frugal" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="frugal" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="frugal" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="frugal" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="frugal" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Generoso</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="generoso" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="generoso" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="generoso" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="generoso" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="generoso" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="generoso" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="generoso" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="generoso" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="generoso" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="generoso" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Buen padre/madre</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="buen_padre_madre" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="buen_padre_madre" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="buen_padre_madre" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="buen_padre_madre" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="buen_padre_madre" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="buen_padre_madre" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="buen_padre_madre" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="buen_padre_madre" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="buen_padre_madre" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="buen_padre_madre" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Hospitalario</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="hospitalario" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="hospitalario" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="hospitalario" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="hospitalario" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="hospitalario" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="hospitalario" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="hospitalario" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="hospitalario" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="hospitalario" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="hospitalario" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Humilde</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="humilde" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="humilde" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="humilde" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="humilde" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="humilde" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="humilde" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="humilde" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="humilde" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="humilde" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="humilde" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Mantiene su palabra</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="mantiene_palabra" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="mantiene_palabra" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="mantiene_palabra" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="mantiene_palabra" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="mantiene_palabra" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="mantiene_palabra" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="mantiene_palabra" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="mantiene_palabra" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="mantiene_palabra" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="mantiene_palabra" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Sabe dónde va/ Tiene un plan</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="tiene_plan" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="tiene_plan" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="tiene_plan" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="tiene_plan" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="tiene_plan" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="tiene_plan" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="tiene_plan" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="tiene_plan" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="tiene_plan" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="tiene_plan" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Amoroso</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="amoroso" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="amoroso" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="amoroso" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="amoroso" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="amoroso" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="amoroso" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="amoroso" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="amoroso" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="amoroso" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="amoroso" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Ordenado</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="ordenado" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="ordenado" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="ordenado" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="ordenado" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="ordenado" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="ordenado" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="ordenado" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="ordenado" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="ordenado" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="ordenado" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">No es oportunista</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="no_oportunista" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="no_oportunista" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="no_oportunista" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="no_oportunista" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="no_oportunista" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="no_oportunista" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="no_oportunista" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="no_oportunista" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="no_oportunista" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="no_oportunista" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Objetivo/imparcial</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="objetivo" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="objetivo" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="objetivo" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="objetivo" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="objetivo" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="objetivo" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="objetivo" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="objetivo" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="objetivo" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="objetivo" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Persevera</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="persevera" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="persevera" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="persevera" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="persevera" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="persevera" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="persevera" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="persevera" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="persevera" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="persevera" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="persevera" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Paciente</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="paciente" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="paciente" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="paciente" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="paciente" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="paciente" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="paciente" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="paciente" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="paciente" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="paciente" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="paciente" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Persistente</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="persistente" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="persistente" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="persistente" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="persistente" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="persistente" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="persistente" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="persistente" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="persistente" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="persistente" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="persistente" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Planifica</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="planifica" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="planifica" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="planifica" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="planifica" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="planifica" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="planifica" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="planifica" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="planifica" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="planifica" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="planifica" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Puntual</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="puntual" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="puntual" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="puntual" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="puntual" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="puntual" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="puntual" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="puntual" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="puntual" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="puntual" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="puntual" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Sensible</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="sensible" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="sensible" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="sensible" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="sensible" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="sensible" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="sensible" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="sensible" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="sensible" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="sensible" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="sensible" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Sincero</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="sincero" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="sincero" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="sincero" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="sincero" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="sincero" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="sincero" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="sincero" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="sincero" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="sincero" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="sincero" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Enseñable</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="ensenable" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="ensenable" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="ensenable" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="ensenable" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="ensenable" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="ensenable" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="ensenable" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="ensenable" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="ensenable" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="ensenable" value="5" required> 5</label>
                 </div>
             </div>
             <div class="faq">
                 <button type="button" class="faq-question">Trabaja duro/ buen trabajador</button>
                 <div class="faq-answer">
-                    <label title="1 = debilidad en el área"><input type="radio" name="trabajador" value="1"> 1</label>
-                    <label title="2 = necesita mejorar"><input type="radio" name="trabajador" value="2"> 2</label>
-                    <label title="3 = ha mejorado"><input type="radio" name="trabajador" value="3"> 3</label>
-                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="trabajador" value="4"> 4</label>
-                    <label title="5 = excelente"><input type="radio" name="trabajador" value="5"> 5</label>
+                    <label title="1 = debilidad en el área"><input type="radio" name="trabajador" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="trabajador" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="trabajador" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="trabajador" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="trabajador" value="5" required> 5</label>
                 </div>
             </div>
+            <div class="button-container">
+                <button type="button" onclick="showSection('section3')">Siguiente</button>
+            </div>
+        </div>
+        
+        <div id="section3" class="section" style="display: none;">
+            <h2>Preguntas: Mayordomía de su tiempo (Parte 2)</h2>
             
+            <div class="faq">
+                <button type="button" class="faq-question">Perezoso</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="perezoso" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="perezoso" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="perezoso" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="perezoso" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="perezoso" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Posterga las cosas</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="posterga" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="posterga" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="posterga" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="posterga" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="posterga" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Sin convicciones / flojo, se
+                    deja llevar por cualquier cosa</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="sin_conviccion" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="sin_conviccion" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="sin_conviccion" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="sin_conviccion" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="sin_conviccion" value="5" required> 5</label>
+                </div>
+            </div>
+            <!-- Añadir más preguntas para la sección 2 según sea necesario -->
+            <div class="button-container">
+                <button type="button" onclick="showSection('section2')">Anterior</button>
+                <button type="button" onclick="showSection('section4')">Siguiente</button>
+            </div>
         </div>
-        <div class="button-container">
-            <button type="submit" name="submit">Enviar Respuestas</button>
-        </div>
-    </form>
-    <script>
-        const form = document.forms['google-sheet'];
 
+        <div id="section4" class="section" style="display: none;">
+            <h2>Preguntas: Mayordomía de las finanzas (Parte 3)</h2>
+            
+            <div class="faq">
+                <button type="button" class="faq-question">Avaro</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="avaro" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="avaro" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="avaro" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="avaro" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="avaro" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Codicioso</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="codicioso" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="codicioso" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="codicioso" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="codicioso" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="codicioso" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Impráctico</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="impractico" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="impractico" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="impractico" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="impractico" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="impractico" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Tacaño</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="tacano" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="tacano" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="tacano" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="tacano" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="tacano" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Despilfarrador</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="despilfarrador" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="despilfarrador" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="despilfarrador" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="despilfarrador" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="despilfarrador" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Desperdicia</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="desperdicia" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="desperdicia" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="desperdicia" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="desperdicia" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="desperdicia" value="5" required> 5</label>
+                </div>
+            </div>
+            <!-- Añadir más preguntas para la sección 3 según sea necesario -->
+            <div class="button-container">
+                <button type="button" onclick="showSection('section3')">Anterior</button>
+                <button type="button" onclick="showSection('section5')">Siguiente</button>
+            </div>
+        </div>
+        <div id="section5" class="section" style="display: none;">
+            <h2>Preguntas: Mayordomía de palabras (Parte 5)</h2>
+            
+            <div class="faq">
+                <button type="button" class="faq-question">Le gusta discutir / ser polémico</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="gusta_discutir" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="gusta_discutir" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="gusta_discutir" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="gusta_discutir" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="gusta_discutir" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Explota</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="explota" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="explota" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="explota" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="explota" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="explota" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Descarado</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="descarado" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="descarado" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="descarado" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="descarado" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="descarado" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Presume/ostentoso</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="presume" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="presume" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="presume" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="presume" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="presume" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Quiere tener la última palabra</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="ultima_palabra" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="ultima_palabra" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="ultima_palabra" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="ultima_palabra" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="ultima_palabra" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Superficial</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="superficial" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="superficial" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="superficial" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="superficial" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="superficial" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Habla sin cuidado de consecuencias</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="habla_sin_cuidado" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="habla_sin_cuidado" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="habla_sin_cuidado" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="habla_sin_cuidado" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="habla_sin_cuidado" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Chismosea</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="chismosea" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="chismosea" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="chismosea" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="chismosea" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="chismosea" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Severo</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="severo" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="severo" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="severo" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="severo" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="severo" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Insolente</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="insolente" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="insolente" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="insolente" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="insolente" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="insolente" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Insulta</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="insulta" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="insulta" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="insulta" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="insulta" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="insulta" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Miente/falso</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="miente" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="miente" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="miente" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="miente" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="miente" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Combativo/ beligerante</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="combativo" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="combativo" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="combativo" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="combativo" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="combativo" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Sarcástico</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="sarcastico" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="sarcastico" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="sarcastico" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="sarcastico" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="sarcastico" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Grita</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="grita" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="grita" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="grita" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="grita" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="grita" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Difama con facilidad</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="difama" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="difama" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="difama" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="difama" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="difama" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Estallidos de malgenio</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="malgenio" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="malgenio" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="malgenio" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="malgenio" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="malgenio" value="5" required> 5</label>
+                </div>
+            </div>
+        
+            <div class="button-container">
+                <button type="button" onclick="showSection('section4')">Anterior</button>
+                <button type="button" onclick="showSection('section6')">Siguiente</button>
+            </div>
+        </div>
+        <div id="section6" class="section" style="display: none;">
+            <h2>Preguntas: Toma de decisiones (Parte 6)</h2>
+            
+            <div class="faq">
+                <button type="button" class="faq-question">Indeciso</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="indeciso" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="indeciso" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="indeciso" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="indeciso" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="indeciso" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Indiferente</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="indiferente" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="indiferente" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="indiferente" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="indiferente" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="indiferente" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Inflexible</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="inflexible" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="inflexible" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="inflexible" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="inflexible" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="inflexible" value="5" required> 5</label>
+                </div>
+            </div>
+            <!-- Añadir más preguntas para la sección 2 según sea necesario -->
+            <div class="button-container">
+                <button type="button" onclick="showSection('section5')">Anterior</button>
+                <button type="button" onclick="showSection('section7')">Siguiente</button>
+            </div>
+        </div>
+        <div id="section7" class="section" style="display: none;">
+            <h2>Preguntas: Situaciones del corazón (Parte 7)</h2>
+            <h3>Hacia sí mismo</h3>
+
+            <div class="faq">
+                <button type="button" class="faq-question">Arrogante</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="arrogante" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="arrogante" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="arrogante" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="arrogante" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="arrogante" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Engreído</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="engreido" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="engreido" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="engreido" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="engreido" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="engreido" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Codicioso</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="codicioso" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="codicioso" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="codicioso" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="codicioso" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="codicioso" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Llora sin razón</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="llora_sin_razon" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="llora_sin_razon" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="llora_sin_razon" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="llora_sin_razon" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="llora_sin_razon" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Llora a menudo</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="llora_a_menudo" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="llora_a_menudo" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="llora_a_menudo" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="llora_a_menudo" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="llora_a_menudo" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Deshonesto</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="deshonesto" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="deshonesto" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="deshonesto" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="deshonesto" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="deshonesto" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Desobediente</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="desobediente" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="desobediente" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="desobediente" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="desobediente" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="desobediente" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Nunca contento / satisfecho</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="nunca_contento" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="nunca_contento" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="nunca_contento" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="nunca_contento" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="nunca_contento" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Muy ambicioso</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="muy_ambicioso" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="muy_ambicioso" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="muy_ambicioso" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="muy_ambicioso" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="muy_ambicioso" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Excesivamente independiente</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="independiente" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="independiente" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="independiente" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="independiente" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="independiente" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Perfeccionista</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="perfeccionista" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="perfeccionista" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="perfeccionista" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="perfeccionista" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="perfeccionista" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Mezquino</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="mezquino" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="mezquino" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="mezquino" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="mezquino" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="mezquino" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Imprudente</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="imprudente" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="imprudente" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="imprudente" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="imprudente" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="imprudente" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Maquinador</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="maquinador" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="maquinador" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="maquinador" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="maquinador" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="maquinador" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Solapado/sigiloso</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="solapado" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="solapado" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="solapado" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="solapado" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="solapado" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Egoísta/obstinado</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="egoista" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="egoista" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="egoista" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="egoista" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="egoista" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Sin carácter/ se deja llevar</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="sin_caracter" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="sin_caracter" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="sin_caracter" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="sin_caracter" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="sin_caracter" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Terco / difícil</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="terco" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="terco" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="terco" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="terco" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="terco" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Quisquilloso / delicado</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="quisquilloso" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="quisquilloso" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="quisquilloso" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="quisquilloso" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="quisquilloso" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Escéptico / incrédulo</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="esceptico" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="esceptico" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="esceptico" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="esceptico" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="esceptico" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Sin discernimiento</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="sin_discernimiento" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="sin_discernimiento" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="sin_discernimiento" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="sin_discernimiento" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="sin_discernimiento" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Irracional, impráctico</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="irracional" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="irracional" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="irracional" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="irracional" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="irracional" value="5" required> 5</label>
+                </div>
+            </div>
+        
+            <div class="button-container">
+                <button type="button" onclick="showSection('section6')">Anterior</button>
+                <button type="button" onclick="showSection('section8')">Continuar</button>
+            </div>
+        </div>
+        <div id="section8" class="section" style="display: none;">
+            <h2>Preguntas: Situaciones del corazón (Parte 7)</h2>
+            <h3>Hacia otros</h3>
+        
+            <div class="faq">
+                <button type="button" class="faq-question">Menosprecia</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="menosprecia" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="menosprecia" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="menosprecia" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="menosprecia" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="menosprecia" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Amargado / resentido</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="amargado" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="amargado" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="amargado" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="amargado" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="amargado" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Hecha la culpa a los demás / siempre es la culpa de otros</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="culpa_otros" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="culpa_otros" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="culpa_otros" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="culpa_otros" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="culpa_otros" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Explota</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="explota" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="explota" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="explota" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="explota" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="explota" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Brutal</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="brutal" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="brutal" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="brutal" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="brutal" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="brutal" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Se calla / se cierra</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="se_calla" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="se_calla" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="se_calla" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="se_calla" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="se_calla" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Exclusivista / solo se lleva con un tipo de persona</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="exclusivista" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="exclusivista" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="exclusivista" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="exclusivista" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="exclusivista" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">De mente cerrada</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="mente_cerrada" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="mente_cerrada" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="mente_cerrada" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="mente_cerrada" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="mente_cerrada" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Se queja/ da lata</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="se_queja" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="se_queja" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="se_queja" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="se_queja" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="se_queja" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Busca corregir a la gente en temas secundarios</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="corrige_temas_secundarios" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="corrige_temas_secundarios" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="corrige_temas_secundarios" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="corrige_temas_secundarios" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="corrige_temas_secundarios" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Crítico</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="critico" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="critico" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="critico" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="critico" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="critico" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Cruel</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="cruel" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="cruel" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="cruel" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="cruel" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="cruel" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Deshonesto</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="deshonesto" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="deshonesto" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="deshonesto" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="deshonesto" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="deshonesto" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Exigente/ demanda</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="exigente" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="exigente" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="exigente" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="exigente" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="exigente" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Desconfiado</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="desconfiado" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="desconfiado" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="desconfiado" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="desconfiado" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="desconfiado" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Dominante / mandón</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="dominante" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="dominante" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="dominante" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="dominante" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="dominante" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Embarazoso</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="embarazoso" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="embarazoso" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="embarazoso" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="embarazoso" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="embarazoso" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Requiere mucha atención</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="requiere_atencion" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="requiere_atencion" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="requiere_atencion" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="requiere_atencion" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="requiere_atencion" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Tiene odio a…</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="odio" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="odio" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="odio" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="odio" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="odio" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Santurrón “más santo que todos” - Actitud de superioridad moral</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="santurron" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="santurron" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="santurron" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="santurron" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="santurron" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Hostil</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="hostil" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="hostil" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="hostil" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="hostil" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="hostil" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Hipócrita</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="hipocrita" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="hipocrita" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="hipocrita" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="hipocrita" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="hipocrita" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Impaciente</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="impaciente" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="impaciente" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="impaciente" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="impaciente" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="impaciente" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Inconsiderado</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="inconsiderado" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="inconsiderado" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="inconsiderado" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="inconsiderado" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="inconsiderado" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Insensible</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="insensible" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="insensible" value="2"required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="insensible" value="3"required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="insensible" value="4"required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="insensible" value="5"required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Interrumpe</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="interrumpe" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="interrumpe" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="interrumpe" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="interrumpe" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="interrumpe" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Celoso</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="celoso" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="celoso" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="celoso" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="celoso" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="celoso" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Juzga</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="juzga" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="juzga" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="juzga" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="juzga" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="juzga" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Malicioso</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="malicioso" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="malicioso" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="malicioso" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="malicioso" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="malicioso" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Manipula / se entromete</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="manipula" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="manipula" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="manipula" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="manipula" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="manipula" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Dañino</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="danino" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="danino" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="danino" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="danino" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="danino" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Controlador</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="controlador" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="controlador" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="controlador" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="controlador" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="controlador" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">“Picky” – quisquilloso</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="picky" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="picky" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="picky" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="picky" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="picky" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Posesivo</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="posesivo" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="posesivo" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="posesivo" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="posesivo" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="posesivo" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Avasallador</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="avasallador" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="avasallador" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="avasallador" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="avasallador" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="avasallador" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Pospone confrontar</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="pospone_confrontar" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="pospone_confrontar" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="pospone_confrontar" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="pospone_confrontar" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="pospone_confrontar" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Racionaliza</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="racionaliza" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="racionaliza" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="racionaliza" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="racionaliza" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="racionaliza" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Rebeldía / no se somete</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="rebeldia" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="rebeldia" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="rebeldia" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="rebeldia" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="rebeldia" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Resentido</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="resentido" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="resentido" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="resentido" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="resentido" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="resentido" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Inflexible / rígido</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="inflexible" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="inflexible" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="inflexible" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="inflexible" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="inflexible" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Grosero / irrespetuoso</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="grosero" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="grosero" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="grosero" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="grosero" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="grosero" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Entrometido / metiche</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="entrometido" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="entrometido" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="entrometido" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="entrometido" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="entrometido" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Rencoroso</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="rencoroso" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="rencoroso" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="rencoroso" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="rencoroso" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="rencoroso" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Desconfiado / sospecha</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="desconfiado_sospecha" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="desconfiado_sospecha" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="desconfiado_sospecha" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="desconfiado_sospecha" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="desconfiado_sospecha" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Insensible</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="insensible_2" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="insensible_2" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="insensible_2" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="insensible_2" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="insensible_2" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Demasiado sensible</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="demasiado_sensible" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="demasiado_sensible" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="demasiado_sensible" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="demasiado_sensible" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="demasiado_sensible" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Desconsiderado</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="desconsiderado" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="desconsiderado" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="desconsiderado" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="desconsiderado" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="desconsiderado" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Tiránico</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="tiranico" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="tiranico" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="tiranico" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="tiranico" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="tiranico" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">No le gusta cooperar / trabajar en equipo</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="no_cooperar" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="no_cooperar" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="no_cooperar" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="no_cooperar" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="no_cooperar" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Injusto</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="injusto" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="injusto" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="injusto" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="injusto" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="injusto" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Cuesta perdonar / implacable</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="implacable" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="implacable" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="implacable" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="implacable" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="implacable" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Desagradecido</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="desagradecido" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="desagradecido" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="desagradecido" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="desagradecido" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="desagradecido" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Antipático / desagradable</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="antipatico" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="antipatico" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="antipatico" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="antipatico" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="antipatico" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Rudo</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="rudo" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="rudo" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="rudo" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="rudo" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="rudo" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">No cariñoso / amoroso</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="no_carinoso" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="no_carinoso" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="no_carinoso" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="no_carinoso" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="no_carinoso" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">Cruel / sin compasión</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="cruel_sin_compasion" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="cruel_sin_compasion" value="2"required>  2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="cruel_sin_compasion" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="cruel_sin_compasion" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="cruel_sin_compasion" value="5" required> 5</label>
+                </div>
+            </div>
+            <div class="faq">
+                <button type="button" class="faq-question">No confiable</button>
+                <div class="faq-answer">
+                    <label title="1 = debilidad en el área"><input type="radio" name="no_confiable" value="1" required> 1</label>
+                    <label title="2 = necesita mejorar"><input type="radio" name="no_confiable" value="2" required> 2</label>
+                    <label title="3 = ha mejorado"><input type="radio" name="no_confiable" value="3" required> 3</label>
+                    <label title="4 = satisfactorio/área de Fortaleza"><input type="radio" name="no_confiable" value="4" required> 4</label>
+                    <label title="5 = excelente"><input type="radio" name="no_confiable" value="5" required> 5</label>
+                </div>
+            </div>
+        
+            <div class="button-container">
+                <button type="button" onclick="showSection('section4')">Anterior</button>
+                <button type="submit">Enviar Respuestas</button>
+            </div>
+        </div>
+        
+    </form>
+
+    <script>
+        function showSection(sectionId) {
+            // Oculta todas las secciones
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+            // Muestra la sección seleccionada
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    
+        const form = document.forms['google-sheet'];
+    
         form.addEventListener('submit', e => {
             e.preventDefault();
             fetch(form.action, { method: 'POST', body: new FormData(form) })
@@ -472,7 +1623,19 @@
                 })
                 .catch(error => console.error('Error!', error.message));
         });
+    
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
+                }
+            });
+        });
     </script>
+    
 
     <script src="script.js"></script>
 
