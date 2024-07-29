@@ -9,121 +9,318 @@
 <body>
 
     <h1>Inventario Personal</h1>
-    <p class="verso">Mateo 7:1-5</p>
+    <p class="verso" id="bibleVerse">Mateo 7:1-5</p>
+    <div class="verse-bubble" id="verseBubble">
+        <p>“No juzguéis, para que no seáis juzgados. 2 Porque con el juicio con que juzgáis, seréis juzgados, y con la medida con que medís, os será medido. 3 ¿Y por qué miras la paja que está en el ojo de tu hermano, y no echas de ver la viga que está en tu propio ojo? 4 ¿O cómo dirás a tu hermano: Déjame sacar la paja de tu ojo, y he aquí la viga en el ojo tuyo? 5 ¡Hipócrita! saca primero la viga de tu propio ojo, y entonces verás bien para sacar la paja del ojo de tu hermano(RVR1960).”</p>
+    </div>
     
     <div class="section">
         <h2>Instrucciones</h2>
         <p>Califique a Edgar Martinez con toda honestidad y valentía a la hora de calificar. Esto ayudará a Edgar a discernir cómo tiene que cambiar.</p>
         <p>Note que las listas incluyen rasgos positivos y negativos. Dios nos pide no solo despojarnos del pecado, pero ponernos a Cristo y crecer en parecernos a Él. En las áreas negativas usa la misma escala.</p>
         <h2>Escala:</h2>
-        <p class="escala">1 = debilidad en el área; 2 = necesita mejorar; 3 = ha mejorado; 4 = satisfactorio/área de Fortaleza.</p>
-        <p>Ejemplo: “Explota”- Ponga 1 si explotar es un comportamiento habitual y 4 si es algo en lo que, en la gracia de Dios, no es una lucha.</p>
+        <p class="escala">1 = debilidad en el área; 2 = necesita mejorar; 3 = ha mejorado; 4 = satisfactorio/área de Fortaleza; 5 = excelente.</p>
+        <p>Ejemplo: “Explota”- Ponga 1 si explotar es un comportamiento habitual y 4 si es algo en lo que, en la gracia de Dios, no es una lucha.</p> 
     </div>
-    
+
     <form id="inventarioForm" method="post" autocomplete="off" name="google-sheet" action="https://script.google.com/macros/s/AKfycbzFQXtnHaiZqKNmsr6RTsMrx1MzcVnLJNjFxefvrAUjCnHQgInoiQM86N5BiHAvqjNRxw/exec">
-        <div class="section">
-            <h2>Preguntas: La Persona</h2>
-            <div id="questions-container"></div>
+
+        <div id="section1" class="section">
+            <h2 class="h2_preguntas">Preguntas: La Persona (Parte 1/6)</h2>
+            <!-- Questions will be inserted here -->
+            <div class="button-container">
+                <button type="button" onclick="showSection('section2')">Siguiente</button>
+            </div>
         </div>
-        <div class="button-container">
-            <button type="submit" name="submit">Enviar Respuestas</button>
+        
+        <div id="section2" class="section" style="display: none;">
+            <p class="escala_preguntas">ESCALA: [1 = debilidad en el área] [2 = necesita mejorar] [3 = ha mejorado] [4 = satisfactorio/área de Fortaleza] [5 = excelente]</p>
+            <h2 class="h2_preguntas">Preguntas: Mayordomía de su tiempo (Parte 2/6)</h2>
+            <!-- Questions will be inserted here -->
+            <div class="button-container">
+                <button type="button" onclick="showSection('section1')">Regresar</button>
+                <button type="button" onclick="showSection('section3')">Siguiente</button>
+            </div>
         </div>
+
+        <div id="section3" class="section" style="display: none;">
+            <h2 class="h2_preguntas">Preguntas: Mayordomía de las finanzas (Parte 3/6)</h2>
+            <!-- Questions will be inserted here -->
+            <div class="button-container">
+                <button type="button" onclick="showSection('section2')">Regresar</button>
+                <button type="button" onclick="showSection('section4')">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="section4" class="section" style="display: none;">
+            <h2 class="h2_preguntas">Preguntas: Mayordomía de palabras (Parte 4/6)</h2>
+            <!-- Questions will be inserted here -->
+            <div class="button-container">
+                <button type="button" onclick="showSection('section3')">Regresar</button>
+                <button type="button" onclick="showSection('section5')">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="section5" class="section" style="display: none;">
+            <h2 class="h2_preguntas">Preguntas: Toma de decisiones (Parte 5/6)</h2>
+            <!-- Questions will be inserted here -->
+            <div class="button-container">
+                <button type="button" onclick="showSection('section4')">Regresar</button>
+                <button type="button" onclick="showSection('section6')">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="section6" class="section" style="display: none;">
+            <h2 class="h2_preguntas">Preguntas: Situaciones del corazón (Parte 6/6)</h2>
+            <h3 class="h3_preguntas">Hacia sí mismo</h3>
+            <!-- Questions will be inserted here -->
+            <div class="button-container">
+                <button type="button" onclick="showSection('section5')">Regresar</button>
+                <button type="button" onclick="showSection('section7')">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="section7" class="section" style="display: none;">
+            <h2 class="h2_preguntas">Preguntas: Situaciones del corazón (Parte 6/6)</h2>
+            <h3 class="h3_preguntas">Hacia otros</h3>
+            <!-- Questions will be inserted here -->
+            <div class="button-container">
+                <button type="button" onclick="showSection('section6')">Regresar</button>
+                <button type="submit" name="submit">Enviar Respuestas</button>
+            </div>
+        </div>
+
     </form>
-    
+
     <script>
-        const questions = [
-            { name: "admite_equivoca", label: "Admite cuando se equivoca" },
-            { name: "analitico", label: "Analítico" },
-            { name: "apreciativo", label: "Apreciativo" },
-            { name: "compasivo", label: "Compasivo" },
-            { name: "concienzudo", label: "Concienzudo" },
-            { name: "meticuloso", label: "Meticuloso" },
-            { name: "considerado", label: "Considerado" },
-            { name: "consistente", label: "Consistente" },
-            { name: "dispuesto_cooperar", label: "Dispuesto a cooperar" },
-            { name: "valiente", label: "Valiente, persona de valor/coraje" },
-            { name: "cortes", label: "Cortés" },
-            { name: "creativo", label: "Creativo" },
-            { name: "decisivo", label: "Decisivo" },
-            { name: "confiable", label: "Confiable" },
-            { name: "diligente", label: "Diligente" },
-            { name: "discerniente", label: "Discerniente" },
-            { name: "disciplinado", label: "Disciplinado" },
-            { name: "no_se_aprovecha", label: "No se aprovecha de situaciones" },
-            { name: "no_usa_gente", label: "No usa a la gente" },
-            { name: "eficiente", label: "Eficiente" },
-            { name: "entusiasta", label: "Entusiasta" },
-            { name: "justo", label: "Justo" },
-            { name: "flexible", label: "Flexible" },
-            { name: "frugal", label: "Frugal" },
-            { name: "generoso", label: "Generoso" },
-            { name: "buen_padre_madre", label: "Buen padre/madre" },
-            { name: "hospitalario", label: "Hospitalario" },
-            { name: "humilde", label: "Humilde" },
-            { name: "mantiene_palabra", label: "Mantiene su palabra" },
-            { name: "tiene_plan", label: "Sabe dónde va/ Tiene un plan" },
-            { name: "amoroso", label: "Amoroso" },
-            { name: "ordenado", label: "Ordenado" },
-            { name: "no_oportunista", label: "No es oportunista" },
-            { name: "objetivo", label: "Objetivo/imparcial" },
-            { name: "persevera", label: "Persevera" },
-            { name: "paciente", label: "Paciente" },
-            { name: "persistente", label: "Persistente" },
-            { name: "planifica", label: "Planifica" },
-            { name: "puntual", label: "Puntual" },
-            { name: "sensible", label: "Sensible" },
-            { name: "sincero", label: "Sincero" },
-            { name: "ensenable", label: "Enseñable" },
-            { name: "trabajador", label: "Trabaja duro/ buen trabajador" },
-        ];
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        const questionsData = {
+            section1: [
+                { name: "admite_equivoca", label: "Admite cuando se equivoca" },
+                { name: "analitico", label: "Analítico" },
+                { name: "apreciativo", label: "Apreciativo" },
+                { name: "compasivo", label: "Compasivo" },
+                { name: "concienzudo", label: "Concienzudo" },
+                { name: "meticuloso", label: "Meticuloso" },
+                { name: "considerado", label: "Considerado" },
+                { name: "consistente", label: "Consistente" },
+                { name: "dispuesto_cooperar", label: "Dispuesto a cooperar" },
+                { name: "valiente", label: "Valiente, persona de valor/coraje" },
+                { name: "cortes", label: "Cortés" },
+                { name: "creativo", label: "Creativo" },
+                { name: "decisivo", label: "Decisivo" },
+                { name: "confiable", label: "Confiable" },
+                { name: "diligente", label: "Diligente" },
+                { name: "discerniente", label: "Discerniente" },
+                { name: "disciplinado", label: "Disciplinado" },
+                { name: "no_se_aprovecha", label: "No se aprovecha de situaciones" },
+                { name: "no_usa_gente", label: "No usa a la gente" },
+                { name: "eficiente", label: "Eficiente" },
+                { name: "entusiasta", label: "Entusiasta" },
+                { name: "justo", label: "Justo" },
+                { name: "flexible", label: "Flexible" },
+                { name: "frugal", label: "Frugal" },
+                { name: "generoso", label: "Generoso" },
+                { name: "buen_padre_madre", label: "Buen padre/madre" },
+                { name: "hospitalario", label: "Hospitalario" },
+                { name: "humilde", label: "Humilde" },
+                { name: "mantiene_palabra", label: "Mantiene su palabra" },
+                { name: "tiene_plan", label: "Sabe dónde va/ Tiene un plan" },
+                { name: "amoroso", label: "Amoroso" },
+                { name: "ordenado", label: "Ordenado" },
+                { name: "no_oportunista", label: "No es oportunista" },
+                { name: "objetivo", label: "Objetivo/imparcial" },
+                { name: "persevera", label: "Persevera" },
+                { name: "paciente", label: "Paciente" },
+                { name: "persistente", label: "Persistente" },
+                { name: "planifica", label: "Planifica" },
+                { name: "puntual", label: "Puntual" },
+                { name: "sensible", label: "Sensible" },
+                { name: "sincero", label: "Sincero" },
+                { name: "ensenable", label: "Enseñable" },
+                { name: "trabajador", label: "Trabaja duro/ buen trabajador" },
+            ],
+            section2: [
+                { name: "perezoso", label: "Perezoso" },
+                { name: "posterga", label: "Posterga las cosas" },
+                { name: "sin_conviccion", label: "Sin convicciones / flojo, se deja llevar por cualquier cosa" },
+                // add more questions as needed
+            ],
+            section3: [
+                { name: "avaro", label: "Avaro" },
+                { name: "codicioso", label: "Codicioso" },
+                { name: "impractico", label: "Impráctico" },
+                { name: "tacano", label: "Tacaño" },
+                { name: "despilfarrador", label: "Despilfarrador" },
+                { name: "desperdicia", label: "Desperdicia" },
+                // add more questions as needed
+            ],
+            section4: [
+            { name: "gusta_discutir", label: "Le gusta discutir / ser polémico" },
+            { name: "explota", label: "Explota" },
+            { name: "descarado", label: "Descarado" },
+            { name: "presume", label: "Presume/Ostentoso" },
+            { name: "ultima_palabra", label: "Quiere tener la ultima palabra" },
+            { name: "superficial", label: "Superficial" },
+            { name: "habla_sin_cuidado", label: "Habla sin cuidado de consecuencias" },
+            { name: "chismosea", label: "Chismosea" },
+            { name: "severo", label: "Severo" },
+            { name: "insolente", label: "Insolente" },
+            { name: "insulta", label: "Insulta" },
+            { name: "miente", label: "Miente/Falso" },
+            { name: "combativo", label: "Combativo/beligerante" },
+            { name: "sarcastico", label: "Sarcástico" },
+            { name: "grita", label: "Grita" },
+            { name: "difama", label: "Difama con facilidad" },
+            { name: "malgenio", label: "Estallidos de malgenio" },
+                // add more questions as needed
+            ],
+            section5: [
+                { name: "indeciso", label: "Indeciso" },
+                { name: "indiferente", label: "Indiferente" },
+                { name: "inflexible", label: "Inflexible" },
+                // add more questions as needed
+            ],
+            section6: [
+            { name: "arrogante", label: "Arrogante" },
+            { name: "engreido", label: "Engreído" },
+            { name: "llora_sin_razon", label: "Llora sin razón" },
+            { name: "llora_a_menudo", label: "Llora a menudo" },
+            { name: "deshonesto", label: "Deshonesto" },
+            { name: "desobediente", label: "Desobediente" },
+            { name: "nunca_contento", label: "Nunca contento / satisfecho" },
+            { name: "muy_ambicioso", label: "Muy ambicioso" },
+            { name: "independiente", label: "Independiente" },
+            { name: "perfeccionista", label: "Perfeccionista" },
+            { name: "mezquino", label: "Mezquino" },
+            { name: "imprudente", label: "Imprudente" },
+            { name: "maquinador", label: "Maquinador" },
+            { name: "solapado", label: "Solapado / sigiloso" },
+            { name: "egoista", label: "Egoísta/obstinado" },
+            { name: "sin_caracter", label: "Sin carácter / se deja llevar" },
+            { name: "terco", label: "Terco / difícil" },
+            { name: "quisquilloso", label: "Quisquilloso / delicado" },
+            { name: "esceptico", label: "Escéptico/incrédulo" },
+            { name: "sin_discernimiento", label: "Sin discernimiento" },
+            { name: "irracional", label: "Irracional" },
+                // add more questions as needed
+            ],
+            section7: [
+            { name: "menosprecia", label: "Menosprecia" },
+            { name: "amargado", label: "Amargado" },
+            { name: "culpa_otros", label: "Culpa a otros" },
+            { name: "brutal", label: "Brutal" },
+            { name: "se_calla", label: "Se calla" },
+            { name: "exclusivista", label: "Exclusivista" },
+            { name: "mente_cerrada", label: "Mente cerrada" },
+            { name: "se_queja", label: "Se queja" },
+            { name: "corrige_temas_secundarios", label: "Corrige temas secundarios" },
+            { name: "critico", label: "Crítico" },
+            { name: "cruel", label: "Cruel" },
+            { name: "exigente", label: "Exigente" },
+            { name: "desconfiado", label: "Desconfiado" },
+            { name: "dominante", label: "Dominante" },
+            { name: "embarazoso", label: "Embarazoso" },
+            { name: "requiere_atencion", label: "Requiere atención" },
+            { name: "odio", label: "Odio" },
+            { name: "santurron", label: "Santurrón" },
+            { name: "hostil", label: "Hostil" },
+            { name: "hipocrita", label: "Hipócrita" },
+            { name: "impaciente", label: "Impaciente" },
+            { name: "inconsiderado", label: "Inconsiderado" },
+            { name: "insensible", label: "Insensible" },
+            { name: "interrumpe", label: "Interrumpe" },
+            { name: "celoso", label: "Celoso" },
+            { name: "juzga", label: "Juzga" },
+            { name: "malicioso", label: "Malicioso" },
+            { name: "manipula", label: "Manipula" },
+            { name: "danino", label: "Dañino" },
+            { name: "controlador", label: "Controlador" },
+            { name: "picky", label: "Picky" },
+            { name: "posesivo", label: "Posesivo" },
+            { name: "avasallador", label: "Avasallador" },
+            { name: "pospone_confrontar", label: "Pospone confrontar" },
+            { name: "racionaliza", label: "Racionaliza" },
+            { name: "rebeldia", label: "Rebeldía" },
+            { name: "resentido", label: "Resentido" },
+            { name: "inflexible", label: "Inflexible" },
+            { name: "grosero", label: "Grosero" },
+            { name: "entrometido", label: "Entrometido" },
+            { name: "rencoroso", label: "Rencoroso" },
+            { name: "desconfiado_sospecha", label: "Desconfiado/Sospecha" },
+            { name: "insensible_2", label: "Insensible" },
+            { name: "demasiado_sensible", label: "Demasiado sensible" },
+            { name: "desconsiderado", label: "Desconsiderado" },
+            { name: "tiranico", label: "Tiránico" },
+            { name: "no_cooperar", label: "No cooperar" },
+            { name: "injusto", label: "Injusto" },
+            { name: "implacable", label: "Implacable" },
+            { name: "desagradecido", label: "Desagradecido" },
+            { name: "antipatico", label: "Antipático" },
+            { name: "rudo", label: "Rudo" },
+            { name: "no_carinoso", label: "No cariñoso" },
+            { name: "cruel_sin_compasion", label: "Cruel sin compasión" },
+            { name: "no_confiable", label: "No confiable" },
+                // add more questions as needed
+            ]
+        };
 
         document.addEventListener("DOMContentLoaded", function () {
-            const container = document.getElementById('questions-container');
+            Object.keys(questionsData).forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                const questions = questionsData[sectionId];
 
-            questions.forEach(question => {
-                const faqDiv = document.createElement('div');
-                faqDiv.classList.add('faq');
+                questions.forEach(question => {
+                    const faqDiv = document.createElement('div');
+                    faqDiv.classList.add('faq');
 
-                const button = document.createElement('button');
-                button.type = 'button';
-                button.classList.add('faq-question');
-                button.textContent = question.label;
-                faqDiv.appendChild(button);
+                    const button = document.createElement('button');
+                    button.type = 'button';
+                    button.classList.add('faq-question');
+                    button.textContent = question.label;
+                    faqDiv.appendChild(button);
 
-                const answerDiv = document.createElement('div');
-                answerDiv.classList.add('faq-answer');
+                    const answerDiv = document.createElement('div');
+                    answerDiv.classList.add('faq-answer');
 
-                for (let i = 1; i <= 5; i++) {
-                    const label = document.createElement('label');
-                    label.title = `${i} = ${i === 1 ? 'debilidad en el área' : i === 2 ? 'necesita mejorar' : i === 3 ? 'ha mejorado' : i === 4 ? 'satisfactorio/área de Fortaleza' : 'excelente'}`;
-                    const input = document.createElement('input');
-                    input.type = 'radio';
-                    input.name = question.name;
-                    input.value = i;
-                    input.required = true;
-                    label.appendChild(input);
-                    label.append(` ${i}`);
-                    answerDiv.appendChild(label);
-                }
-
-                faqDiv.appendChild(answerDiv);
-                container.appendChild(faqDiv);
-            });
-
-            document.querySelectorAll('.faq-question').forEach(button => {
-                button.addEventListener('click', () => {
-                    const answer = button.nextElementSibling;
-                    if (answer.style.display === 'block') {
-                        answer.style.display = 'none';
-                    } else {
-                        answer.style.display = 'block';
+                    for (let i = 1; i <= 5; i++) {
+                        const label = document.createElement('label');
+                        label.title = `${i} = ${i === 1 ? 'debilidad en el área' : i === 2 ? 'necesita mejorar' : i === 3 ? 'ha mejorado' : i === 4 ? 'satisfactorio/área de Fortaleza' : 'excelente'}`;
+                        const input = document.createElement('input');
+                        input.type = 'radio';
+                        input.name = question.name;
+                        input.value = i;
+                        input.required = true;
+                        label.appendChild(input);
+                        label.append(` ${i}`);
+                        answerDiv.appendChild(label);
                     }
+
+                    faqDiv.appendChild(answerDiv);
+                    section.insertBefore(faqDiv, section.querySelector('.button-container'));
+                });
+
+                document.querySelectorAll('.faq-question').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const answer = button.nextElementSibling;
+                        if (answer.style.display === 'block') {
+                            answer.style.display = 'none';
+                        } else {
+                            answer.style.display = 'block';
+                        }
+                    });
                 });
             });
         });
-    </script>
 
-    <script>
         const form = document.forms['google-sheet'];
 
         form.addEventListener('submit', e => {
@@ -136,8 +333,6 @@
                 .catch(error => console.error('Error!', error.message));
         });
     </script>
-
     <script src="script.js"></script>
-
 </body>
 </html>
