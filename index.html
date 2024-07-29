@@ -25,6 +25,7 @@
     </div>
 
     <form id="inventarioForm" method="post" autocomplete="off" name="google-sheet" action="https://script.google.com/macros/s/AKfycbzFQXtnHaiZqKNmsr6RTsMrx1MzcVnLJNjFxefvrAUjCnHQgInoiQM86N5BiHAvqjNRxw/exec">
+<<<<<<< HEAD
 
         <div id="section1" class="section">
             <h2 class="h2_preguntas">Preguntas: La Persona (Parte 1/6)</h2>
@@ -32,6 +33,11 @@
             <div class="button-container">
                 <button type="button" onclick="showSection('section2')">Siguiente</button>
             </div>
+=======
+        <div class="section">
+            <h2>Preguntas: La Persona</h2>
+            <div id="questions-container"></div>
+>>>>>>> b80771afc01108384117dc53a83327ff4f72a2b1
         </div>
         
         <div id="section2" class="section" style="display: none;">
@@ -97,6 +103,102 @@
         </div>
 
     </form>
+<<<<<<< HEAD
+=======
+    
+    <script>
+        const questions = [
+            { name: "admite_equivoca", label: "Admite cuando se equivoca" },
+            { name: "analitico", label: "Analítico" },
+            { name: "apreciativo", label: "Apreciativo" },
+            { name: "compasivo", label: "Compasivo" },
+            { name: "concienzudo", label: "Concienzudo" },
+            { name: "meticuloso", label: "Meticuloso" },
+            { name: "considerado", label: "Considerado" },
+            { name: "consistente", label: "Consistente" },
+            { name: "dispuesto_cooperar", label: "Dispuesto a cooperar" },
+            { name: "valiente", label: "Valiente, persona de valor/coraje" },
+            { name: "cortes", label: "Cortés" },
+            { name: "creativo", label: "Creativo" },
+            { name: "decisivo", label: "Decisivo" },
+            { name: "confiable", label: "Confiable" },
+            { name: "diligente", label: "Diligente" },
+            { name: "discerniente", label: "Discerniente" },
+            { name: "disciplinado", label: "Disciplinado" },
+            { name: "no_se_aprovecha", label: "No se aprovecha de situaciones" },
+            { name: "no_usa_gente", label: "No usa a la gente" },
+            { name: "eficiente", label: "Eficiente" },
+            { name: "entusiasta", label: "Entusiasta" },
+            { name: "justo", label: "Justo" },
+            { name: "flexible", label: "Flexible" },
+            { name: "frugal", label: "Frugal" },
+            { name: "generoso", label: "Generoso" },
+            { name: "buen_padre_madre", label: "Buen padre/madre" },
+            { name: "hospitalario", label: "Hospitalario" },
+            { name: "humilde", label: "Humilde" },
+            { name: "mantiene_palabra", label: "Mantiene su palabra" },
+            { name: "tiene_plan", label: "Sabe dónde va/ Tiene un plan" },
+            { name: "amoroso", label: "Amoroso" },
+            { name: "ordenado", label: "Ordenado" },
+            { name: "no_oportunista", label: "No es oportunista" },
+            { name: "objetivo", label: "Objetivo/imparcial" },
+            { name: "persevera", label: "Persevera" },
+            { name: "paciente", label: "Paciente" },
+            { name: "persistente", label: "Persistente" },
+            { name: "planifica", label: "Planifica" },
+            { name: "puntual", label: "Puntual" },
+            { name: "sensible", label: "Sensible" },
+            { name: "sincero", label: "Sincero" },
+            { name: "ensenable", label: "Enseñable" },
+            { name: "trabajador", label: "Trabaja duro/ buen trabajador" },
+        ];
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.getElementById('questions-container');
+
+            questions.forEach(question => {
+                const faqDiv = document.createElement('div');
+                faqDiv.classList.add('faq');
+
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.classList.add('faq-question');
+                button.textContent = question.label;
+                faqDiv.appendChild(button);
+
+                const answerDiv = document.createElement('div');
+                answerDiv.classList.add('faq-answer');
+
+                for (let i = 1; i <= 5; i++) {
+                    const label = document.createElement('label');
+                    label.title = `${i} = ${i === 1 ? 'debilidad en el área' : i === 2 ? 'necesita mejorar' : i === 3 ? 'ha mejorado' : i === 4 ? 'satisfactorio/área de Fortaleza' : 'excelente'}`;
+                    const input = document.createElement('input');
+                    input.type = 'radio';
+                    input.name = question.name;
+                    input.value = i;
+                    input.required = true;
+                    label.appendChild(input);
+                    label.append(` ${i}`);
+                    answerDiv.appendChild(label);
+                }
+
+                faqDiv.appendChild(answerDiv);
+                container.appendChild(faqDiv);
+            });
+
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.nextElementSibling;
+                    if (answer.style.display === 'block') {
+                        answer.style.display = 'none';
+                    } else {
+                        answer.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+>>>>>>> b80771afc01108384117dc53a83327ff4f72a2b1
 
     <script>
         function showSection(sectionId) {
