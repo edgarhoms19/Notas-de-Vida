@@ -147,6 +147,15 @@ button[type="button"]:hover {
     color: white;
 }
 
+.especial {
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #0066cc;
+    color: white;
+}
+
 .faq-answer {
     display: none;
 }
