@@ -30,7 +30,7 @@
             <h2 class="h2_preguntas">Preguntas: La Persona (Parte 1/6)</h2>
             <!-- Questions will be inserted here -->
             <div class="button-container">
-                <button type="button" onclick="showSection('section2')">Siguiente</button>
+                <button type="button" class="disabled-button" onclick="showSection('section2')" disabled>Siguiente</button>
             </div>
         </div>
         
@@ -39,8 +39,8 @@
             <h2 class="h2_preguntas">Preguntas: Mayordomía de su tiempo (Parte 2/6)</h2>
             <!-- Questions will be inserted here -->
             <div class="button-container">
-                <button type="button" onclick="showSection('section1')">Regresar</button>
-                <button type="button" onclick="showSection('section3')">Siguiente</button>
+                <button type="button" class="enabled-button" onclick="showSection('section1')">Regresar</button>
+                <button type="button" class="disabled-button" onclick="showSection('section3')" disabled>Siguiente</button>
             </div>
         </div>
 
@@ -49,8 +49,8 @@
             <h2 class="h2_preguntas">Preguntas: Mayordomía de las finanzas (Parte 3/6)</h2>
             <!-- Questions will be inserted here -->
             <div class="button-container">
-                <button type="button" onclick="showSection('section2')">Regresar</button>
-                <button type="button" onclick="showSection('section4')">Siguiente</button>
+                <button type="button" class="enabled-button" onclick="showSection('section2')">Regresar</button>
+                <button type="button" class="disabled-button" onclick="showSection('section4')" disabled>Siguiente</button>
             </div>
         </div>
 
@@ -59,8 +59,8 @@
             <h2 class="h2_preguntas">Preguntas: Mayordomía de palabras (Parte 4/6)</h2>
             <!-- Questions will be inserted here -->
             <div class="button-container">
-                <button type="button" onclick="showSection('section3')">Regresar</button>
-                <button type="button" onclick="showSection('section5')">Siguiente</button>
+                <button type="button" class="enabled-button" onclick="showSection('section3')">Regresar</button>
+                <button type="button" class="disabled-button" onclick="showSection('section5')" disabled>Siguiente</button>
             </div>
         </div>
 
@@ -69,8 +69,8 @@
             <h2 class="h2_preguntas">Preguntas: Toma de decisiones (Parte 5/6)</h2>
             <!-- Questions will be inserted here -->
             <div class="button-container">
-                <button type="button" onclick="showSection('section4')">Regresar</button>
-                <button type="button" onclick="showSection('section6')">Siguiente</button>
+                <button type="button" class="enabled-button" onclick="showSection('section4')">Regresar</button>
+                <button type="button" class="disabled-button" onclick="showSection('section6')" disabled>Siguiente</button>
             </div>
         </div>
 
@@ -80,8 +80,8 @@
             <h3 class="h3_preguntas">Hacia sí mismo</h3>
             <!-- Questions will be inserted here -->
             <div class="button-container">
-                <button type="button" onclick="showSection('section5')">Regresar</button>
-                <button type="button" onclick="showSection('section7')">Siguiente</button>
+                <button type="button" class="enabled-button" onclick="showSection('section5')">Regresar</button>
+                <button type="button" class="disabled-button" onclick="showSection('section7')" disabled>Siguiente</button>
             </div>
         </div>
 
@@ -91,8 +91,8 @@
             <h3 class="h3_preguntas">Hacia otros</h3>
             <!-- Questions will be inserted here -->
             <div class="button-container">
-                <button type="button" onclick="showSection('section6')">Regresar</button>
-                <button type="submit" name="submit">Enviar Respuestas</button>
+                <button type="button" class="enabled-button" onclick="showSection('section6')">Regresar</button>
+                <button type="submit" name="submit" class="disabled-button" disabled>Enviar Respuestas</button>
             </div>
         </div>
     </form>
@@ -170,6 +170,10 @@
                         label.appendChild(input);
                         label.append(` ${i}`);
                         answerDiv.appendChild(label);
+
+                        input.addEventListener('change', () => {
+                            checkSectionCompletion(sectionId);
+                        });
                     }
 
                     faqDiv.appendChild(answerDiv);
@@ -188,6 +192,31 @@
                 });
             });
         });
+
+        function checkSectionCompletion(sectionId) {
+            const section = document.getElementById(sectionId);
+            const requiredInputs = section.querySelectorAll('input[required]');
+            let allAnswered = true;
+
+            requiredInputs.forEach(input => {
+                const radioGroup = section.querySelectorAll(`input[name="${input.name}"]`);
+                const isAnswered = Array.from(radioGroup).some(radio => radio.checked);
+                if (!isAnswered) {
+                    allAnswered = false;
+                }
+            });
+
+            const button = section.querySelector('.button-container button[disabled]');
+            if (allAnswered) {
+                button.classList.remove('disabled-button');
+                button.classList.add('enabled-button');
+                button.disabled = false;
+            } else {
+                button.classList.remove('enabled-button');
+                button.classList.add('disabled-button');
+                button.disabled = true;
+            }
+        }
 
         const form = document.forms['google-sheet'];
 
