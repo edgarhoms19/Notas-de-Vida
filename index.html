@@ -11,26 +11,26 @@
     <h1>Inventario Personal</h1>
     <p class="verso" id="bibleVerse">Mateo 7:1-5</p>
     <div class="verse-bubble" id="verseBubble">
-        <p>“No juzguéis, para que no seáis juzgados. 2 Porque con el juicio con que juzgáis, seréis juzgados, y con la medida con que medís, os será medido. 3 ¿Y por qué miras la paja que está en el ojo de tu hermano, y no echas de ver la viga que está en tu propio ojo? 4 ¿O cómo dirás a tu hermano: Déjame sacar la paja de tu ojo, y he aquí la viga en el ojo tuyo? 5 ¡Hipócrita! saca primero la viga de tu propio ojo, y entonces verás bien para sacar la paja del ojo de tu hermano(RVR1960).”</p>
+        <p>“No juzguéis, para que no seáis juzgados. Porque con el juicio con que juzgáis, seréis juzgados, y con la medida con que medís, os será medido. ¿Y por qué miras la paja que está en el ojo de tu hermano, y no echas de ver la viga que está en tu propio ojo? ¿O cómo dirás a tu hermano: Déjame sacar la paja de tu ojo, y he aquí la viga en el ojo tuyo? ¡Hipócrita! saca primero la viga de tu propio ojo, y entonces verás bien para sacar la paja del ojo de tu hermano.(RVR1960)”</p>
     </div>
     
     <div class="section">
         <h2>Instrucciones</h2>
-        <p>Califique a Edgar Martinez con toda honestidad y valentía a la hora de calificar. Esto ayudará a Edgar a discernir cómo tiene que cambiar.</p>
-        <p>Note que las listas incluyen rasgos positivos y negativos. Dios nos pide no solo despojarnos del pecado, pero ponernos a Cristo y crecer en parecernos a Él. En las áreas negativas usa la misma escala.</p>
-        <p class="especial">Asegurate que todas las preguntas esten en azul antes de dar click en "Enviar Respuestas".</p>
+        <p>Al calificar a Edgar, le pedimos que lo haga con valentía y honestidad. Esto ayudará a Edgar a discernir cómo tiene que cambiar.</p>
+        <p>Noté que las listas incluyen rasgos positivos y negativos. Dios nos pide no solo despojarnos del pecado, sino también revestirnos de Cristo y crecer para parecernos a Él. En las áreas negativas, usa la misma escala.</p>
+        <p class="especial">Conforme conteste cada pregunta, la pregunta se tornará azul y, una vez haya contestado todas las preguntas en cada sección, el botón de 'siguiente' se habilitará.</p>
         <h2>Escala:</h2>
-        <p class="escala">1 = debilidad en el área; 2 = necesita mejorar; 3 = ha mejorado; 4 = satisfactorio/área de Fortaleza; 5 = excelente.</p>
-        <p>Ejemplo: “Explota”- Ponga 1 si explotar es un comportamiento habitual y 4 si es algo en lo que, en la gracia de Dios, no es una lucha.</p> 
+        <p class="escala">1 = debilidad en el área; 2 = necesita mejorar; 3 = ha mejorado; 4 = satisfactorio / área de Fortaleza; 5 = excelente.</p>
+        <p>Ejemplo: “Explota” -> Ponga 1 si explotar es un comportamiento habitual y 4 si es algo en lo que, en la gracia de Dios, no es una lucha.</p> 
     </div>
 
     <form id="inventarioForm" method="post" autocomplete="off" name="google-sheet" action="https://script.google.com/macros/s/AKfycbzFQXtnHaiZqKNmsr6RTsMrx1MzcVnLJNjFxefvrAUjCnHQgInoiQM86N5BiHAvqjNRxw/exec">
-
+        
         <div id="section1" class="section">
             <h2 class="h2_preguntas">Preguntas: La Persona (Parte 1/6)</h2>
             <!-- Questions will be inserted here -->
             <div class="button-container">
-                <button type="button" onclick="showSection('section2')">Siguiente</button>
+                <button type="button" class="disabled-button" onclick="showSection('section2')" disabled>Siguiente</button>
             </div>
         </div>
         
@@ -39,8 +39,8 @@
             <h2 class="h2_preguntas">Preguntas: Mayordomía de su tiempo (Parte 2/6)</h2>
             <!-- Questions will be inserted here -->
             <div class="button-container">
-                <button type="button" onclick="showSection('section1')">Regresar</button>
-                <button type="button" onclick="showSection('section3')">Siguiente</button>
+                <button type="button" class="enabled-button" onclick="showSection('section1')">Regresar</button>
+                <button type="button" class="disabled-button" onclick="showSection('section3')" disabled>Siguiente</button>
             </div>
         </div>
 
@@ -49,8 +49,8 @@
             <h2 class="h2_preguntas">Preguntas: Mayordomía de las finanzas (Parte 3/6)</h2>
             <!-- Questions will be inserted here -->
             <div class="button-container">
-                <button type="button" onclick="showSection('section2')">Regresar</button>
-                <button type="button" onclick="showSection('section4')">Siguiente</button>
+                <button type="button" class="enabled-button" onclick="showSection('section2')">Regresar</button>
+                <button type="button" class="disabled-button" onclick="showSection('section4')" disabled>Siguiente</button>
             </div>
         </div>
 
@@ -59,8 +59,8 @@
             <h2 class="h2_preguntas">Preguntas: Mayordomía de palabras (Parte 4/6)</h2>
             <!-- Questions will be inserted here -->
             <div class="button-container">
-                <button type="button" onclick="showSection('section3')">Regresar</button>
-                <button type="button" onclick="showSection('section5')">Siguiente</button>
+                <button type="button" class="enabled-button" onclick="showSection('section3')">Regresar</button>
+                <button type="button" class="disabled-button" onclick="showSection('section5')" disabled>Siguiente</button>
             </div>
         </div>
 
@@ -69,8 +69,8 @@
             <h2 class="h2_preguntas">Preguntas: Toma de decisiones (Parte 5/6)</h2>
             <!-- Questions will be inserted here -->
             <div class="button-container">
-                <button type="button" onclick="showSection('section4')">Regresar</button>
-                <button type="button" onclick="showSection('section6')">Siguiente</button>
+                <button type="button" class="enabled-button" onclick="showSection('section4')">Regresar</button>
+                <button type="button" class="disabled-button" onclick="showSection('section6')" disabled>Siguiente</button>
             </div>
         </div>
 
@@ -80,8 +80,8 @@
             <h3 class="h3_preguntas">Hacia sí mismo</h3>
             <!-- Questions will be inserted here -->
             <div class="button-container">
-                <button type="button" onclick="showSection('section5')">Regresar</button>
-                <button type="button" onclick="showSection('section7')">Siguiente</button>
+                <button type="button" class="enabled-button" onclick="showSection('section5')">Regresar</button>
+                <button type="button" class="disabled-button" onclick="showSection('section7')" disabled>Siguiente</button>
             </div>
         </div>
 
@@ -91,105 +91,14 @@
             <h3 class="h3_preguntas">Hacia otros</h3>
             <!-- Questions will be inserted here -->
             <div class="button-container">
-                <button type="button" onclick="showSection('section6')">Regresar</button>
-                <button type="submit" name="submit">Enviar Respuestas</button>
+                <button type="button" class="enabled-button" onclick="showSection('section6')">Regresar</button>
+                <button type="submit" name="submit" class="disabled-button" disabled>Enviar Respuestas</button>
             </div>
         </div>
-
     </form>
-    
-    <script>
-        const questions = [
-            { name: "admite_equivoca", label: "Admite cuando se equivoca" },
-            { name: "analitico", label: "Analítico" },
-            { name: "apreciativo", label: "Apreciativo" },
-            { name: "compasivo", label: "Compasivo" },
-            { name: "concienzudo", label: "Concienzudo" },
-            { name: "meticuloso", label: "Meticuloso" },
-            { name: "considerado", label: "Considerado" },
-            { name: "consistente", label: "Consistente" },
-            { name: "dispuesto_cooperar", label: "Dispuesto a cooperar" },
-            { name: "valiente", label: "Valiente, persona de valor/coraje" },
-            { name: "cortes", label: "Cortés" },
-            { name: "creativo", label: "Creativo" },
-            { name: "decisivo", label: "Decisivo" },
-            { name: "confiable", label: "Confiable" },
-            { name: "diligente", label: "Diligente" },
-            { name: "discerniente", label: "Discerniente" },
-            { name: "disciplinado", label: "Disciplinado" },
-            { name: "no_se_aprovecha", label: "No se aprovecha de situaciones" },
-            { name: "no_usa_gente", label: "No usa a la gente" },
-            { name: "eficiente", label: "Eficiente" },
-            { name: "entusiasta", label: "Entusiasta" },
-            { name: "justo", label: "Justo" },
-            { name: "flexible", label: "Flexible" },
-            { name: "frugal", label: "Frugal" },
-            { name: "generoso", label: "Generoso" },
-            { name: "buen_padre_madre", label: "Buen padre/madre" },
-            { name: "hospitalario", label: "Hospitalario" },
-            { name: "humilde", label: "Humilde" },
-            { name: "mantiene_palabra", label: "Mantiene su palabra" },
-            { name: "tiene_plan", label: "Sabe dónde va/ Tiene un plan" },
-            { name: "amoroso", label: "Amoroso" },
-            { name: "ordenado", label: "Ordenado" },
-            { name: "no_oportunista", label: "No es oportunista" },
-            { name: "objetivo", label: "Objetivo/imparcial" },
-            { name: "persevera", label: "Persevera" },
-            { name: "paciente", label: "Paciente" },
-            { name: "persistente", label: "Persistente" },
-            { name: "planifica", label: "Planifica" },
-            { name: "puntual", label: "Puntual" },
-            { name: "sensible", label: "Sensible" },
-            { name: "sincero", label: "Sincero" },
-            { name: "ensenable", label: "Enseñable" },
-            { name: "trabajador", label: "Trabaja duro/ buen trabajador" },
-        ];
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const container = document.getElementById('questions-container');
-
-            questions.forEach(question => {
-                const faqDiv = document.createElement('div');
-                faqDiv.classList.add('faq');
-
-                const button = document.createElement('button');
-                button.type = 'button';
-                button.classList.add('faq-question');
-                button.textContent = question.label;
-                faqDiv.appendChild(button);
-
-                const answerDiv = document.createElement('div');
-                answerDiv.classList.add('faq-answer');
-
-                for (let i = 1; i <= 5; i++) {
-                    const label = document.createElement('label');
-                    label.title = `${i} = ${i === 1 ? 'debilidad en el área' : i === 2 ? 'necesita mejorar' : i === 3 ? 'ha mejorado' : i === 4 ? 'satisfactorio/área de Fortaleza' : 'excelente'}`;
-                    const input = document.createElement('input');
-                    input.type = 'radio';
-                    input.name = question.name;
-                    input.value = i;
-                    input.required = true;
-                    label.appendChild(input);
-                    label.append(` ${i}`);
-                    answerDiv.appendChild(label);
-                }
-
-                faqDiv.appendChild(answerDiv);
-                container.appendChild(faqDiv);
-            });
-
-            document.querySelectorAll('.faq-question').forEach(button => {
-                button.addEventListener('click', () => {
-                    const answer = button.nextElementSibling;
-                    if (answer.style.display === 'block') {
-                        answer.style.display = 'none';
-                    } else {
-                        answer.style.display = 'block';
-                    }
-                });
-            });
-        });
-    </script>
+    <div class="overlay"></div>
+    <div class="dialog" id="loadingDialog">Loading...</div>
 
     <script>
         function showSection(sectionId) {
@@ -401,6 +310,10 @@
                         label.appendChild(input);
                         label.append(` ${i}`);
                         answerDiv.appendChild(label);
+
+                        input.addEventListener('change', () => {
+                            checkSectionCompletion(sectionId);
+                        });
                     }
 
                     faqDiv.appendChild(answerDiv);
@@ -420,18 +333,57 @@
             });
         });
 
+        function checkSectionCompletion(sectionId) {
+            const section = document.getElementById(sectionId);
+            const requiredInputs = section.querySelectorAll('input[required]');
+            let allAnswered = true;
+
+            requiredInputs.forEach(input => {
+                const radioGroup = section.querySelectorAll(`input[name="${input.name}"]`);
+                const isAnswered = Array.from(radioGroup).some(radio => radio.checked);
+                if (!isAnswered) {
+                    allAnswered = false;
+                }
+            });
+
+            const button = section.querySelector('.button-container button[disabled]');
+            if (allAnswered) {
+                button.classList.remove('disabled-button');
+                button.classList.add('enabled-button');
+                button.disabled = false;
+            } else {
+                button.classList.remove('enabled-button');
+                button.classList.add('disabled-button');
+                button.disabled = true;
+            }
+        }
+
         const form = document.forms['google-sheet'];
 
         form.addEventListener('submit', e => {
             e.preventDefault();
+            document.querySelector('.overlay').style.display = 'block';
+            const loadingDialog = document.getElementById('loadingDialog');
+            loadingDialog.style.display = 'block';
             fetch(form.action, { method: 'POST', body: new FormData(form) })
                 .then(response => {
-                    alert("¡Gracias!");
-                    form.reset(); // Clear the form fields
+                    loadingDialog.textContent = 'Redireccionando!';
+                    setTimeout(() => {
+                        window.location.href = 'thank_you.html';
+                    }, 1000); // Adjust the delay as needed
                 })
-                .catch(error => console.error('Error!', error.message));
+                .catch(error => {
+                    document.querySelector('.overlay').style.display = 'none';
+                    loadingDialog.style.display = 'none';
+                    console.error('Error!', error.message);
+                });
         });
     </script>
+    <footer>
+        <div class="footer">
+            <p>Encuesta para el proyecto de mejora personal para la clase de 'Introducción a la Consejería' de 'The Master's Seminary'.</p>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
