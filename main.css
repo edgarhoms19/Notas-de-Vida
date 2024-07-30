@@ -162,8 +162,8 @@ button[type="button"]:hover {
 
 /* Default radio button styles */
 input[type="radio"] {
-    width: 20px; /* Default width */
-    height: 20px; /* Default height */
+    width: 30px; /* Default width */
+    height: 30px; /* Default height */
     -webkit-appearance: none; /* Remove default styling */
     -moz-appearance: none; /* Remove default styling */
     appearance: none; /* Remove default styling */
@@ -176,8 +176,8 @@ input[type="radio"] {
 
 input[type="radio"]:checked::before {
     content: '';
-    width: 12px; /* Inner circle width */
-    height: 12px; /* Inner circle height */
+    width: 20px; /* Inner circle width */
+    height: 20px; /* Inner circle height */
     border-radius: 50%; /* Make it round */
     background-color: #333; /* Inner circle color */
     position: absolute; /* Position it inside the radio button */
