@@ -26,3 +26,26 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+// **Script to show bubble with bible verse.**
+
+document.addEventListener("DOMContentLoaded", function() {
+    const bibleVerse = document.getElementById("bibleVerse");
+    const verseBubble = document.getElementById("verseBubble");
+
+    bibleVerse.addEventListener("click", function() {
+        if (verseBubble.style.display === "block") {
+            verseBubble.style.display = "none";
+        } else {
+            const rect = bibleVerse.getBoundingClientRect();
+            verseBubble.style.top = `${rect.bottom + window.scrollY + 10}px`; // Add 10px for some space below the text
+            verseBubble.style.display = "block";
+        }
+    });
+
+    document.addEventListener("click", function(event) {
+        if (!bibleVerse.contains(event.target) && !verseBubble.contains(event.target)) {
+            verseBubble.style.display = "none";
+        }
+    });
+});

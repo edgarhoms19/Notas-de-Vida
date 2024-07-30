@@ -34,6 +34,18 @@ h1 {
     margin: 1rem 0;
 }
 
+.h2_preguntas {
+    text-align: center;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.h3_preguntas {
+    text-align: center;
+    margin: 1rem 0;
+    color: blue;
+}
+
 .section {
     margin: 1rem 2rem;
     padding: 1rem;
@@ -71,10 +83,13 @@ h1 {
 .button-container {
     text-align: center;
     margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    gap: .5rem; /* Adjust the gap as needed */
 }
 
 button[type="submit"] {
-    background-color: #333;
+    background-color: #0066cc;
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -83,6 +98,19 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
+    background-color: forestgreen;
+}
+
+button[type="button"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button[type="button"]:hover {
     background-color: #555;
 }
 
@@ -107,4 +135,139 @@ button[type="submit"]:hover {
     padding: 1rem;
     background-color: #333;
     color: white;
+}
+
+.escala_preguntas {
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: small;
+    background-color: #969696;
+    color: white;
+}
+
+.especial {
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #0066cc;
+    color: white;
+}
+
+.faq-answer {
+    display: none;
+}
+
+/* Default radio button styles */
+input[type="radio"] {
+    width: 20px; /* Default width */
+    height: 20px; /* Default height */
+    -webkit-appearance: none; /* Remove default styling */
+    -moz-appearance: none; /* Remove default styling */
+    appearance: none; /* Remove default styling */
+    border: 1px solid #333; /* Border color */
+    border-radius: 50%; /* Make it round */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Pointer cursor */
+    position: relative; /* For pseudo-element */
+}
+
+input[type="radio"]:checked::before {
+    content: '';
+    width: 12px; /* Inner circle width */
+    height: 12px; /* Inner circle height */
+    border-radius: 50%; /* Make it round */
+    background-color: #333; /* Inner circle color */
+    position: absolute; /* Position it inside the radio button */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center using transform */
+}
+
+/* Wrapper for radio buttons */
+.radio-wrapper {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    gap: 10px; /* Space between radio buttons */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+    .faq-answer {
+        display: flex;
+        justify-content: center; /* Center the group of radio buttons */
+    }
+
+    .radio-wrapper {
+        justify-content: space-between; /* Space out items evenly */
+        width: 100%; /* Ensure the group takes full width */
+    }
+}
+
+/* Settings for the verse to appear in a bubble */
+.verso {
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    position: relative; /* Ensure the tooltip is positioned relative to this element */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+}
+
+.tooltip-text {
+    visibility: hidden; /* Hide tooltip by default */
+    width: 200px; /* Set width of tooltip */
+    background-color: #333; /* Background color */
+    color: #fff; /* Text color */
+    text-align: center; /* Center text */
+    border-radius: 6px; /* Rounded corners */
+    padding: 10px; /* Padding */
+    position: absolute; /* Position the tooltip */
+    z-index: 1; /* Ensure it is on top */
+    bottom: 125%; /* Position above the text */
+    left: 50%; /* Center horizontally */
+    margin-left: -100px; /* Adjust to center */
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.3s; /* Smooth transition */
+}
+
+.tooltip-text::after {
+    content: ""; /* Arrow of the tooltip */
+    position: absolute;
+    top: 100%; /* Position at the bottom */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent; /* Arrow color */
+}
+
+.verso.show-tooltip .tooltip-text {
+    visibility: visible; /* Show tooltip */
+    opacity: 1; /* Fully visible */
+}
+
+.verse-bubble {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    max-width: 300px;
+    z-index: 1000;
+    left: 0;
+    transform: translateX(10%);
+    color: white;
+}
+
+.verse-bubble p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: inherit;
 }
